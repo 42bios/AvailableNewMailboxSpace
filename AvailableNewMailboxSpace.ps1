@@ -6,7 +6,7 @@
 #	Version:		0.1
 #=================================================================================
 
-if ( (Get-PSSnapin -Name Microsoft.Exchange.Management.PowerShell.E2010 -ErrorAction:SilentlyContinue) -eq $null)
+if ($null -eq (Get-PSSnapin -Name Microsoft.Exchange.Management.PowerShell.E2010 -ErrorAction:SilentlyContinue))
 {
     Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010
 }
