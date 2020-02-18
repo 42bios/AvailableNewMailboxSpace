@@ -41,13 +41,13 @@ $dbfreeMB = $dbf.AvailableNewMailboxSpace.ToMB()
     } #end if
    if ($NagiosStatus -eq "2") 
 {
-	Write-Host ""$NagiosDescription" MB ($dbfreeMB MiB) in use. Max. allowed is: "$minDBfree" MB | 'DBsizeMiB'=${dbfreeMB}"
+	Write-Output ""$NagiosDescription" MB ($dbfreeMB MiB) in use. Max. allowed is: "$minDBfree" MB | 'DBsizeMiB'=${dbfreeMB}"
 	
 
 } 
 else 
 {	
-Write-Host "Database: "$dbfreeMB" MiB | 'DBsizeMiB'=${dbfreeMB}"
+Write-Output "Database: "$dbfreeMB" MiB | 'DBsizeMiB'=${dbfreeMB}"
 
 }
 
